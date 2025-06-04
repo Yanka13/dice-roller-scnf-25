@@ -6,5 +6,5 @@ import random
 app  = Flask(__name__)
 
 @app.route('/dice')
-def hello():
+def dice():
     return jsonify({"roll": random.randint(1, 6)})
