@@ -1,9 +1,10 @@
 from flask import Flask 
 from flask import jsonify
+import random 
 
 
 app  = Flask(__name__)
 
 @app.route('/dice')
-def hello():
-    return jsonify({"roll": 0})
+def dice():
+    return jsonify({"roll": random.randint(1, 6)})
